@@ -3,36 +3,43 @@
 //  Weather
 //
 //  Created by Yerassyl Tynymbay on 05.03.2024
-//  
 //
 
+//
+//  MainAssembly.swift
+//  Weather
+//
+//  Created by Yerassyl Tynymbay on 05.03.2024
+//
 
 import SwiftUI
 
 final class MainAssembly: Assembly {
     
     func build() -> some View {
-        
         let navigation = container.resolve(NavigationAssembly.self).build()
-
-        // Router
         let router = MainRouter(navigation: navigation)
-
-        // Interactor
-        let interactor = MainInteractor()
-
-        //ViewState
-        let viewState =  MainViewState()
-
-        // Presenter
+        let interactor = MainInteractor(apiKey: "2e806c6aeb44e18ccaef341a22c7474c")
+        let viewState = MainViewState()
         let presenter = MainPresenter(router: router,
-                                                           interactor: interactor,
-                                                           viewState: viewState)
+                                      interactor: interactor,
+                                      viewState: viewState)
+        viewState.set(with: presenter, interactor: interactor)
         
-        viewState.set(with: presenter)
         
-        // View
-        let view = MainView(viewState: viewState)
-        return view
+        viewState.weatherData = nil
+        
+        return AnyView(MainView(viewState: viewState))
     }
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -6,6 +6,8 @@
 //  
 //
 
-protocol ViewStateProtocol : AnyObject {
+import Foundation
+
+protocol ViewStateProtocol: AnyObject {
    
 }

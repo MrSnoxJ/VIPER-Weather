@@ -6,6 +6,8 @@
 //  
 //
 
+import Foundation
+
 protocol PresenterProtocol: AnyObject {
-  
+    
 }

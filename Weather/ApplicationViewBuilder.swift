@@ -20,6 +20,8 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
         switch view {
         case .main:
             buildMain()
+        default:
+            EmptyView()
         }
     }
     

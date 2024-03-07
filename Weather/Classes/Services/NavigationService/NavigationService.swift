@@ -9,8 +9,10 @@
 
 import SwiftUI
 
-public class NavigationService: NavigationServiceType  {
-    
+public class NavigationService:  NavigationServiceType  {
+    func pushView(_ view: Views) {
+        items.append(view)
+    }
     public let id = UUID()
     
     public static func == (lhs: NavigationService, rhs: NavigationService) -> Bool {
@@ -20,6 +22,9 @@ public class NavigationService: NavigationServiceType  {
     @Published var modalView: Views?
     @Published var items: [Views] = []
     @Published var alert: CustomAlert?
+    
+    
+    
 }
 
 
@@ -32,19 +37,28 @@ enum Views: Equatable, Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.stringKey)
     }
+   
     
     case main
-    
+    case detailWeather
     var stringKey: String {
         switch self {
         case .main:
             return "main"
+        case .detailWeather:
+            return "detailView"
         }
     }
 }
 
 
 class StubNavigation: NavigationServiceType, ObservableObject, Equatable  {
+    func pushView(_ view: Views) {
+        items.append(view)
+    }
+    
+    
+    
     @Published var modalView: Views?
     @Published var alert: CustomAlert?
     
