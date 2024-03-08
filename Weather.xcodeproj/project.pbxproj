@@ -38,8 +38,9 @@
 		192D14A12B974B9300A9F68E /* WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D14A02B974B9300A9F68E /* WeatherUITestsLaunchTests.swift */; };
 		192D14B02B976B6A00A9F68E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D14AF2B976B6A00A9F68E /* WeatherData.swift */; };
 		192D14B22B97748700A9F68E /* DetailWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D14B12B97748700A9F68E /* DetailWeatherView.swift */; };
-		192D14B62B99C1A600A9F68E /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D14B52B99C1A600A9F68E /* CacheManager.swift */; };
 		192D14B82B99CF2600A9F68E /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D14B72B99CF2600A9F68E /* WeatherRow.swift */; };
+		192D14BA2B9A076700A9F68E /* CacheServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D14B92B9A076700A9F68E /* CacheServiceType.swift */; };
+		193672852B9A0903009692C5 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193672842B9A0903009692C5 /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +96,9 @@
 		192D14A02B974B9300A9F68E /* WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		192D14AF2B976B6A00A9F68E /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		192D14B12B97748700A9F68E /* DetailWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherView.swift; sourceTree = "<group>"; };
-		192D14B52B99C1A600A9F68E /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		192D14B72B99CF2600A9F68E /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
+		192D14B92B9A076700A9F68E /* CacheServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceType.swift; sourceTree = "<group>"; };
+		193672842B9A0903009692C5 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				192D146E2B974B9200A9F68E /* NavigationService */,
+				192D14B92B9A076700A9F68E /* CacheServiceType.swift */,
+				193672842B9A0903009692C5 /* WeatherService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -330,7 +334,6 @@
 				192D14642B974B9200A9F68E /* Interactor */,
 				192D14672B974B9200A9F68E /* Presenter */,
 				192D146A2B974B9200A9F68E /* Router */,
-				192D14B52B99C1A600A9F68E /* CacheManager.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				192D145D2B974B9200A9F68E /* MainAssembly.swift in Sources */,
 				192D144F2B974B9200A9F68E /* InteractorProtocol.swift in Sources */,
 				192D14B22B97748700A9F68E /* DetailWeatherView.swift in Sources */,
+				193672852B9A0903009692C5 /* WeatherService.swift in Sources */,
 				192D14742B974B9200A9F68E /* NavigationService.swift in Sources */,
 				192D14632B974B9200A9F68E /* MainViewState.swift in Sources */,
 				192D14B02B976B6A00A9F68E /* WeatherData.swift in Sources */,
@@ -493,9 +497,9 @@
 				192D145A2B974B9200A9F68E /* MainContracts.swift in Sources */,
 				192D14782B974B9200A9F68E /* Assembly.swift in Sources */,
 				192D14842B974B9200A9F68E /* WeakContainer.swift in Sources */,
-				192D14B62B99C1A600A9F68E /* CacheManager.swift in Sources */,
 				192D147A2B974B9200A9F68E /* AssemblyFactory.swift in Sources */,
 				192D14552B974B9200A9F68E /* ViewStateProtocol.swift in Sources */,
+				192D14BA2B9A076700A9F68E /* CacheServiceType.swift in Sources */,
 				192D14802B974B9200A9F68E /* StrongBox.swift in Sources */,
 				192D144B2B974B9200A9F68E /* ApplicationViewBuilder.swift in Sources */,
 				192D14512B974B9200A9F68E /* PresenterProtocol.swift in Sources */,

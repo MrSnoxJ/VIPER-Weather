@@ -20,7 +20,7 @@ class RootApp: App {
                 
         // Services
         container.apply(NavigationAssembly.self)
-    
+        //container.apply(CacheServiceType.self)
         // Modules
         container.apply(MainAssembly.self)
 
